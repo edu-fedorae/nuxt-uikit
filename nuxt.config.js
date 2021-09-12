@@ -10,8 +10,8 @@ export default {
       { rel: "icon", type: "image/x-icon", href: "/favicon.png" },
     ],
     script: [
-      { src: "/uikit/js/uikit.min.js" },
-      { src: "/uikit/js/uikit-icons.min.js" },
+      { src: "/uikit-3.7.3/js/uikit.min.js" },
+      { src: "/uikit-3.7.3/js/uikit-icons.min.js" },
     ],
   },
   css: ['uikit/dist/css/uikit.css'],
