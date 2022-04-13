@@ -1,13 +1,12 @@
 {
-  "name": "nuxt-uikit",
+  "name": "nuxt-uikit-update",
   "dependencies": {
-    "nuxt": "latest",
-    "uikit": "3.7.3"
+    "nuxt": "^2.15.8",
+    "uikit": "3.13.7"
   },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
-    "start": "nuxt start",
-    "post-update": "yarn upgrade --latest"
+    "start": "nuxt start"
   }
 }

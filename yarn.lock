@@ -5067,7 +5067,7 @@ num2fraction@^1.2.2:
   resolved "https://registry.yarnpkg.com/num2fraction/-/num2fraction-1.2.2.tgz#6f682b6a027a4e9ddfa4564cd2589d1d4e669ede"
   integrity sha1-b2gragJ6Tp3fpFZM0lidHU5mnt4=
 
-nuxt@latest:
+nuxt@^2.15.8:
   version "2.15.8"
   resolved "https://registry.yarnpkg.com/nuxt/-/nuxt-2.15.8.tgz#946cba46bdaaf0e3918aa27fd9ea0fed8ed303b0"
   integrity sha512-ceK3qLg/Baj7J8mK9bIxqw9AavrF+LXqwYEreBdY/a4Sj8YV4mIvhqea/6E7VTCNNGvKT2sJ/TTJjtfQ597lTA==
@@ -7319,10 +7319,10 @@ uglify-js@^3.5.1:
   resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.14.2.tgz#d7dd6a46ca57214f54a2d0a43cad0f35db82ac99"
   integrity sha512-rtPMlmcO4agTUfz10CbgJ1k6UAoXM2gWb3GoMPPZB/+/Ackf8lNWk11K4rYi2D0apgoFRLtQOZhb+/iGNJq26A==
 
-uikit@3.7.3:
-  version "3.7.3"
-  resolved "https://registry.yarnpkg.com/uikit/-/uikit-3.7.3.tgz#6f5b6e51710ad3b2c19c9a96911ff4673289a580"
-  integrity sha512-Ce4ua7ae8/hLdIr02Mbe/Pb0jmj9G9ik5pxOiTr/ALpHqO7TWm03oyubKrNwzscLx54a7GMxJzEFXcwhtyh3sg==
+uikit@3.13.7:
+  version "3.13.7"
+  resolved "https://registry.yarnpkg.com/uikit/-/uikit-3.13.7.tgz#14804f113d3e7b3d8b3adf435610090a3bd8d0ac"
+  integrity sha512-yQrwf5TThdOgBzODL9TBT4tl5b608qS49FaXD1mKcpjVicCmnRMdtQ9zHcmmMJ2zuayDeg6h3S5+L1BDYOX8EA==
 
 unbox-primitive@^1.0.1:
   version "1.0.1"
