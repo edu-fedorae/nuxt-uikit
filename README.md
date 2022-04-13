@@ -1,39 +1,64 @@
 # nuxt-uikit
-Configuring nuxtjs for better uikit support.
+Configuring  NuxtJS for Better UIkit Support.
 
-Like most developer I really LOVE Nuxtjs! and I also really like the UIkit frontend framework. However, while there is a setup guide present for UIkit with Nuxt I realized that whenever the page loads/reloads the icons disappear for a couple seconds while the rest of the content is still present (I assume this is because the icons need JavaScript to work and js only works client side). Now, base on the application you are building you may not want that.
+Like most developers I really LOVE VueJS/NuxtJS! and I also really like the UIkit front-end framework. However, while there is a setup guide present for UIkit with NuxtJS I realized that whenever the page loads/reloads the icons disappear for a couple seconds while the rest of the content is still present (I assume this is because the icons need JavaScript to work and JS only works client side). Now, base on the application you are building you may not want that.
 
-### Here are 2 two methods to solve this issue.
-1. Use the UIkit build folder/files. Place the uikit build folder (e.g., uikit-3.7.3) into the "static" folder in yout Nuxtjs project and point to it using Nuxt header config in the "nuxt.config.js" file.
+This template was created to fix this issue. This is not a perfect solution but it works!
 
-Example:
+### Instructions
+1. Create the Nuxt app.
 ```
-head: {
-    link: [
-      { rel: "stylesheet", href: "/uikit-3.7.3/css/uikit.min.css" },
-    ],
-    script: [
-      { src: "/uikit-3.7.3/js/uikit.min.js" },
-      { src: "/uikit-3.7.3/js/uikit-icons.min.js" },
-    ],
-   },
+yarn create nuxt-app nuxt-uikit
 ```
-#### Cons
-The cons associated with this method are that you need to download the build files whenever there is a new UIkit release and manually configure it again if you want to update your UIkit version (consider that there may also be breaking changes). In addition, you will have a lot of code in your project that are not being used directly or at all.
-
-The next method helps to fix this to some extent but not completely.
-
-2. You can install UIkit into your project using "yarn add uikit" or "npm install uikit" and only add the js folder from the uikit build into the "static" folder of your Nuxtjs project. Then point to the "uikit.min.js" file and the "uikit-icons.min.js" file. Finally, you will need to get the uikit.css file from the node_modules folder using the css property in the "nuxt.config.js" file.
-
-Your file should look like the following:
+2. Change directory to project folder.
 ```
+cd nuxt-uikit
+```
+3. Install UIkit.
+```
+yarn add uikit
+```
+4. Create a js & uikit folder in the static directory.
+```
+mkdir -p static/js/uikit
+```
+5. Copy the uikit.min.js & uikit-icons.min.js files from the node_modules folder to the js/uikit folder in the static directory.
+```
+cp node_modules/uikit/dist/js/uikit.min.js ./static/js/uikit/
+cp node_modules/uikit/dist/js/uikit-icons.min.js ./static/js/uikit/
+```
+6. Configure the nuxt.config.js file to read uikit.min.js & uikit-icons.min.js from the head as a script.
+Your file nuxt.config.js should look like the following:
+```
+export default {
   head: {
+    titleTemplate: "nuxt-uikit",
+    title: "Configuring nuxtjs for better uikit support",
+    htmlAttrs: {
+      lang: "en",
+      amp: true,
+    },
+    link: [
+      { rel: "icon", type: "image/x-icon", href: "/favicon.png" },
+    ],
     script: [
-      { src: "/uikit-3.7.3/js/uikit.min.js" },
-      { src: "/uikit-3.7.3/js/uikit-icons.min.js" },
+      { src: "/js/uikit/uikit.min.js" },
+      { src: "/js/uikit/uikit-icons.min.js" },
     ],
   },
-  css: ['uikit/dist/css/uikit.css'],
+  css: ['uikit/dist/css/uikit.css']
+}
  ```
 
-These are not a perfect fixes, but they work!
+### Install This Template
+```
+git clone https://github.com/edu-fedorae/nuxt-uikit.git
+cd nuxt-uikit
+yarn install
+```
+
+### Note
+You will need to copy the updated code for each new version of UIkit to the static/js/uikit directory / associated files.
+
+### Tutorial Video
+https://youtu.be/NQPDkOTxHlQ
