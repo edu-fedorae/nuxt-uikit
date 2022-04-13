@@ -37,3 +37,6 @@ Your file should look like the following:
  ```
 
 These are not a perfect fixes, but they work!
+
+### Tutorial Video
+https://www.youtube.com/watch?v=2GpmpjEJe28
