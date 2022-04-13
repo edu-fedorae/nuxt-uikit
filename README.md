@@ -49,12 +49,17 @@ export default {
   css: ['uikit/dist/css/uikit.css']
 }
  ```
+ 7. Start dev server.
+```
+yarn dev
+```
 
 ### Install This Template
 ```
 git clone https://github.com/edu-fedorae/nuxt-uikit.git
 cd nuxt-uikit
 yarn install
+yarn dev
 ```
 
 ### Note
