@@ -39,7 +39,7 @@ Your file should look like the following:
   css: ['uikit/dist/css/uikit.css'],
  ```
 
-#### Note
+### Note
 You will need to copy the updated code for each new version of UIkit to the static/js/uikit directory / associated files.
 
 ### Tutorial Video
