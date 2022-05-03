@@ -1,5 +1,5 @@
 # nuxt-uikit
-Configuring  NuxtJS for Better UIkit Support.
+Configuring UIkit for Better NuxtJS Support.
 
 Like most developers I really LOVE VueJS/NuxtJS! and I also really like the UIkit front-end framework. However, while there is a setup guide present for UIkit with NuxtJS I realized that whenever the page loads/reloads the icons disappear for a couple seconds while the rest of the content is still present (I assume this is because the icons need JavaScript to work and JS only works client side). Now, base on the application you are building you may not want that.
 
@@ -33,7 +33,7 @@ Your file nuxt.config.js should look like the following:
 export default {
   head: {
     titleTemplate: "nuxt-uikit",
-    title: "Configuring nuxtjs for better uikit support",
+    title: "Configuring UIkit for better NuxtJS support",
     htmlAttrs: {
       lang: "en",
       amp: true,
@@ -54,16 +54,23 @@ export default {
 yarn dev
 ```
 
-### Install This Template
+### Update Packages To Latest
+```
+yarn post-update
+```
+
+### Update UIkit To Latest
+```
+yarn uikit-update
+```
+
+### Install & Use This Template
 ```
 git clone https://github.com/edu-fedorae/nuxt-uikit.git
 cd nuxt-uikit
 yarn install
 yarn dev
 ```
-
-### Note
-You will need to copy the updated code for each new version of UIkit to the static/js/uikit directory / associated files.
 
 ### Tutorial Video
 https://youtu.be/NQPDkOTxHlQ
