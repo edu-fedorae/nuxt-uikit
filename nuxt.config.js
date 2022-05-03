@@ -1,7 +1,7 @@
 export default {
   head: {
-    titleTemplate: "nuxt-uikit-update",
-    title: "Configuring nuxtjs for better uikit support update",
+    titleTemplate: "nuxt-uikit",
+    title: "Configuring UIkit for better NuxtJS support",
     htmlAttrs: {
       lang: "en",
       amp: true,
