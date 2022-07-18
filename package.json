@@ -15,6 +15,6 @@
   "description": "Configuring UIkit for better NuxtJS SSR Support",
   "main": "index.js",
   "repository": "https://github.com/edu-fedorae/nuxt-uikit.git",
-  "author": "Yisrae <yisrae@fedorae.com>",
+  "author": "Yisrae",
   "license": "MIT"
 }
