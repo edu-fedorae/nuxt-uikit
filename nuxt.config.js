@@ -1,8 +1,6 @@
 export default {
   ssr: false,
 
-  target: "static",
-
   head: {
     titleTemplate: "nuxt-uikit",
     title: "Configuring UIkit for better NuxtJS support",
