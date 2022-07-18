@@ -1,10 +1,16 @@
 # nuxt-uikit
-Configuring UIkit for Better NuxtJS Support.
+Configuring UIkit for Better NuxtJS SSR Support.
 
-Like most developers I really LOVE VueJS/NuxtJS! and I also really like the UIkit front-end framework. However, while there is a setup guide present for UIkit with NuxtJS I realized that whenever the page loads/reloads the icons disappear for a couple seconds while the rest of the content is still present (I assume this is because the icons need JavaScript to work and JS only works client side). Now, base on the application you are building you may not want that.
+Like most developers we really LOVE VueJS/NuxtJS! and we also really like the UIkit front-end framework. However, while there is a setup guide present for UIkit with NuxtJS we realized that whenever the page loads/reloads the icons disappear for a couple seconds while the rest of the content is still present (This is because the icons need JavaScript to work and JS only works client side). Now, base on the application you are building you may not want that.
 
-This template was created to fix this issue. This is not a perfect solution but it works!
+A simple fix is to set `ssr:false` in your `nuxt.config.js` file. 
+See [client branch](https://github.com/edu-fedorae/nuxt-uikit/tree/client)
 
+However, what if you do want an SSR app with UIkit? 
+
+After a very long period of trying to develop and efficient solution for this issue. This work-a-round template is the best we've develop so far.
+
+# Instructions for Creating NuxtJS SSR + UIkit app
 ### Instructions
 1. Create the Nuxt app.
 ```
@@ -27,9 +33,27 @@ mkdir -p static/js/uikit
 cp node_modules/uikit/dist/js/uikit.min.js ./static/js/uikit/
 cp node_modules/uikit/dist/js/uikit-icons.min.js ./static/js/uikit/
 ```
-6. Configure the nuxt.config.js file to read uikit.min.js & uikit-icons.min.js from the head as a script.
-Your file nuxt.config.js should look like the following:
+6. Add an update script to simplify step 5 on package version change.
+Your package.json file should look like the following:
+```json
+{
+  "name": "nuxt-uikit",
+  "dependencies": {
+    "nuxt": "^2.15.8",
+    "uikit": "^3.15.1"
+  },
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "uikit-update": "yarn add uikit && cp node_modules/uikit/dist/js/uikit.min.js ./static/js/uikit/ && cp node_modules/uikit/dist/js/uikit-icons.min.js ./static/js/uikit/",
+    "post-update": "yarn upgrade --latest && cp node_modules/uikit/dist/js/uikit.min.js ./static/js/uikit/ && cp node_modules/uikit/dist/js/uikit-icons.min.js ./static/js/uikit/"
+  }
+}
 ```
+7. Configure the nuxt.config.js file to read uikit.min.js & uikit-icons.min.js from the head as a script.
+Your nuxt.config.js file should look like the following:
+```js
 export default {
   head: {
     titleTemplate: "nuxt-uikit",
@@ -49,7 +73,7 @@ export default {
   css: ['uikit/dist/css/uikit.css']
 }
  ```
- 7. Start dev server.
+8. Start dev server.
 ```
 yarn dev
 ```
@@ -64,6 +88,7 @@ yarn post-update
 yarn uikit-update
 ```
 
+# Template Installation
 ### Install & Use This Template
 ```
 git clone https://github.com/edu-fedorae/nuxt-uikit.git
