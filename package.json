@@ -2,13 +2,11 @@
   "name": "nuxt-uikit",
   "dependencies": {
     "nuxt": "^2.15.8",
-    "uikit": "^3.14.1"
+    "uikit": "^3.15.1"
   },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
-    "start": "nuxt start",
-    "uikit-update": "yarn add uikit && cp node_modules/uikit/dist/js/uikit.min.js ./static/js/uikit/ && cp node_modules/uikit/dist/js/uikit-icons.min.js ./static/js/uikit/",
-    "post-update": "yarn upgrade --latest && cp node_modules/uikit/dist/js/uikit.min.js ./static/js/uikit/ && cp node_modules/uikit/dist/js/uikit-icons.min.js ./static/js/uikit/"
+    "start": "nuxt start"
   }
 }
