@@ -4,7 +4,7 @@ Configuring UIkit for Better NuxtJS SSR Support.
 Like most developers we really LOVE VueJS/NuxtJS! and we also really like the UIkit front-end framework. However, while there is a setup guide present for UIkit with NuxtJS we realized that whenever the page loads/reloads on SSR mode the icons disappear for a couple seconds while the rest of the content is still present (This is because the icons need JavaScript to work and JS only works client side). Now, base on the application you are building you may not want that.
 
 A simple fix is to set `ssr:false` in your `nuxt.config.js` file.  
-See [client branch](https://github.com/edu-fedorae/nuxt-uikit/tree/client)
+See [client branch](https://github.com/edu-fedorae/nuxt-uikit/tree/client-side)
 
 However, what if you do want an SSR app with UIkit? 
 
