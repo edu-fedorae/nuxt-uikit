@@ -2,7 +2,7 @@
   "name": "nuxt-uikit",
   "dependencies": {
     "nuxt": "latest",
-    "uikit": "latest"
+    "uikit": "^3.15.1"
   },
   "scripts": {
     "dev": "nuxt",
