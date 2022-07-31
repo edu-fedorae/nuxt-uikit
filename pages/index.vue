@@ -23,7 +23,7 @@
 
 <script>
 export default {
-  created() {
+  mounted() {
     this.$uikit.notification('Nuxt + UIKIT')
   }
 }
