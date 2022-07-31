@@ -8,7 +8,7 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "uikit-update": "yarn add uikit && cp node_modules/uikit/dist/js/uikit.js ./static/js/uikit/ && cp node_modules/uikit/dist/js/uikit-icons.js ./static/js/uikit/",
+    "uikit-update": "yarn add uikit && cp node_modules/uikit/dist/js/uikit.js ./static/js/uikit/ && cp node_modules/uikit/dist/js/uikit-icons.js ./static/js/uikit/"
   },
   "version": "1.0.0",
   "description": "Configuring UIkit for better NuxtJS SSR Support",
