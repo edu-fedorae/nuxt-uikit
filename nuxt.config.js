@@ -7,7 +7,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'nuxt-uikit-app',
+    title: 'nuxt-uikit-modules',
     htmlAttrs: {
       lang: 'en'
     },
@@ -35,11 +35,11 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-      'nuxt-uikit'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '~/modules/uikit'
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

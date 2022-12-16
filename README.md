@@ -1,4 +1,4 @@
-# nuxt-uikit-app
+# nuxt-uikit-modules
 
 ## Build Setup
 
@@ -68,5 +68,12 @@ This directory contains your Vuex store files. Creating a file in this directory
 
 More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
 
-### Watch Video Tutorial
-[![Video thumbnail](https://i.ytimg.com/vi/jTjHJp49t04/hqdefault.jpg)](https://www.youtube.com/watch?v=jTjHJp49t04&list=PL0kQPOHhjroIiTXPUX68ZGORarNp3BQuK&index=6)
+## References
+
+### Images
+Nuxt.js Logo: https://nuxtjs.org  
+UIkit Logo: https://seeklogo.com/vector-logo/274047/uikit
+
+### Credits
+https://github.com/nuxt/nuxt.js/tree/dev/examples/uikit  
+https://codesandbox.io/s/pjmkmvp327
