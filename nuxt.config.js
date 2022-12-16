@@ -1,23 +1,48 @@
 export default {
+  // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
+  ssr: false,
+
+  // Target: https://go.nuxtjs.dev/config-target
+  target: 'static',
+
+  // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: "nuxt-uikit",
-    title: "Configuring UIkit for better NuxtJS support",
+    title: 'nuxt-uikit-app',
     htmlAttrs: {
-      lang: "en",
-      amp: true,
+      lang: 'en'
     },
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { hid: 'description', name: 'description', content: '' },
+      { name: 'format-detection', content: 'telephone=no' }
+    ],
     link: [
-      { rel: "icon", type: "image/x-icon", href: "/favicon.png" },
-    ],
-    script: [
-      { src: "/js/uikit/uikit.js" },
-      { src: "/js/uikit/uikit-icons.js" },
-    ],
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ]
   },
 
-  css: ['uikit/dist/css/uikit.css'],
+  // Global CSS: https://go.nuxtjs.dev/config-css
+  css: [
+  ],
 
+  // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-   { src: '~/plugins/uikit.js' }
-  ]
+  ],
+
+  // Auto import components: https://go.nuxtjs.dev/config-components
+  components: true,
+
+  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
+  buildModules: [
+      'nuxt-uikit'
+  ],
+
+  // Modules: https://go.nuxtjs.dev/config-modules
+  modules: [
+  ],
+
+  // Build Configuration: https://go.nuxtjs.dev/config-build
+  build: {
+  }
 }

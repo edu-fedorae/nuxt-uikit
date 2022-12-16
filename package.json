@@ -1,19 +1,21 @@
 {
-  "name": "nuxt-uikit",
-  "dependencies": {
-    "nuxt": "latest",
-    "uikit": "latest"
-  },
+  "name": "nuxt-uikit-app",
+  "version": "1.0.0",
+  "private": true,
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "uikit-update": "yarn add uikit && cp node_modules/uikit/dist/js/uikit.js ./static/js/uikit/ && cp node_modules/uikit/dist/js/uikit-icons.js ./static/js/uikit/"
+    "generate": "nuxt generate"
   },
-  "version": "1.0.0",
-  "description": "Configuring UIkit for better NuxtJS SSR Support",
-  "main": "index.js",
-  "repository": "https://github.com/edu-fedorae/nuxt-uikit.git",
-  "author": "Yisrae",
-  "license": "MIT"
+  "dependencies": {
+    "core-js": "^3.25.3",
+    "nuxt": "^2.15.8",
+    "vue": "^2.7.10",
+    "vue-server-renderer": "^2.7.10",
+    "vue-template-compiler": "^2.7.10"
+  },
+  "devDependencies": {
+    "nuxt-uikit": "^2.0.2"
+  }
 }

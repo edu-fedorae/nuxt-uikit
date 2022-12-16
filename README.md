@@ -1,96 +1,72 @@
-# nuxt-uikit
-Configuring UIkit for Better NuxtJS SSR Support.
+# nuxt-uikit-app
 
-Like most developers we really LOVE VueJS/NuxtJS! and we also really like the UIkit front-end framework. However, while there is a setup guide present for UIkit with NuxtJS we realized that whenever the page loads/reloads on SSR mode the icons disappear for a couple seconds while the rest of the content is still present (This is because the icons need JavaScript to work and JS only works client side). Now, base on the application you are building you may not want that.
+## Build Setup
 
-A simple fix is to set `ssr:false` in your `nuxt.config.js` file.  
-See [client branch](https://github.com/edu-fedorae/nuxt-uikit/tree/client-side)
+```bash
+# install dependencies
+$ yarn install
 
-However, what if you do want an SSR app with UIkit? 
+# serve with hot reload at localhost:3000
+$ yarn dev
 
-After a very long period of trying to develop an efficient solution for this issue. This is the best solution we've come up with so far.
+# build for production and launch server
+$ yarn build
+$ yarn start
 
-# Instructions for Creating NuxtJS SSR + UIkit App
-### Instructions
-1. Create the Nuxt app.
-```
-yarn create nuxt-app nuxt-uikit
-```
-2. Change directory to project folder.
-```
-cd nuxt-uikit
-```
-3. Install UIkit.
-```
-yarn add uikit
-```
-4. Create a js & uikit folder in the static directory.
-```
-mkdir -p static/js/uikit
-```
-5. Copy the uikit.js & uikit-icons.js files from the node_modules folder to the js/uikit folder in the static directory.
-```
-cp node_modules/uikit/dist/js/uikit.js ./static/js/uikit/
-cp node_modules/uikit/dist/js/uikit-icons.js ./static/js/uikit/
-```
-6. Add an update script to simplify step 5 on package version change.
-Your package.json file should look like the following:
-```json
-{
-  "name": "nuxt-uikit",
-  "dependencies": {
-    "nuxt": "latest",
-    "uikit": "latest"
-  },
-  "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "uikit-update": "yarn add uikit && cp node_modules/uikit/dist/js/uikit.js ./static/js/uikit/ && cp node_modules/uikit/dist/js/uikit-icons.js ./static/js/uikit/"
-  }
-}
-```
-7. Configure the nuxt.config.js file to read uikit.js & uikit-icons.js from the head as a script.
-Your nuxt.config.js file should look like the following:
-```js
-export default {
-  head: {
-    titleTemplate: "nuxt-uikit",
-    title: "Configuring UIkit for Better NuxtJS SSR Support",
-    htmlAttrs: {
-      lang: "en",
-      amp: true,
-    },
-    link: [
-      { rel: "icon", type: "image/x-icon", href: "/favicon.png" },
-    ],
-    script: [
-      { src: "/js/uikit/uikit.js" },
-      { src: "/js/uikit/uikit-icons.js" },
-    ],
-  },
-  css: ['uikit/dist/css/uikit.css']
-}
- ```
-
-8. Start dev server.
-```
-yarn dev
+# generate static project
+$ yarn generate
 ```
 
-### Update UIkit To Latest
-```
-yarn uikit-update
-```
+For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
 
-# Template Installation
-### Install & Use This Template
-```
-git clone https://github.com/edu-fedorae/nuxt-uikit.git
-cd nuxt-uikit
-yarn install
-yarn dev
-```
+## Special Directories
 
-### Watch Tutorial Video
-https://youtu.be/E8rrF6pKgXk
+You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
+
+### `assets`
+
+The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
+
+More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
+
+### `components`
+
+The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
+
+More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
+
+### `layouts`
+
+Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
+
+More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
+
+
+### `pages`
+
+This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
+
+More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
+
+### `plugins`
+
+The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
+
+More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
+
+### `static`
+
+This directory contains your static files. Each file inside this directory is mapped to `/`.
+
+Example: `/static/robots.txt` is mapped as `/robots.txt`.
+
+More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
+
+### `store`
+
+This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
+
+More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+
+### Watch Video Tutorial
+[![Video thumbnail](https://i.ytimg.com/vi/jTjHJp49t04/hqdefault.jpg)](https://www.youtube.com/watch?v=jTjHJp49t04&list=PL0kQPOHhjroIiTXPUX68ZGORarNp3BQuK&index=6)
